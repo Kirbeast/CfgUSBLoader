@@ -1412,8 +1412,9 @@ void CFG_Default()
 	CFG.gui_compress_covers = 1;
 	CFG.gui_pointer_scroll = 1;
 	// default game settings
-	CFG.game.video    = CFG_VIDEO_AUTO;
-	CFG.game.hooktype = 1; // VBI
+	CFG.game.video    = CFG_VIDEO_GAME;
+	CFG.game.ocarina = 1;
+	CFG.game.hooktype = 7; // AXNextFrame
 	CFG.game.wide_screen = 0; // WIDE IS OFF
 	CFG.game.ntsc_j_patch = 0;
 	CFG.game.channel_boot = 0;
@@ -1434,7 +1435,7 @@ void CFG_Default()
 	for (i = 0; i < MAX_PROFILES; i++)
 		CFG.profile_filter[i] = -1;
 	STRCOPY(CFG.titles_url, "http://www.gametdb.com/titles.txt?LANG={DBL}");
-	CFG.intro = 4;
+	CFG.intro = 0;
 	CFG.fat_install_dir = 1;
 	CFG.fat_split_size = 4;
 	CFG.db_show_info = 1;

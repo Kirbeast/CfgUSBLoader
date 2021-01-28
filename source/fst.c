@@ -49,7 +49,7 @@
 #define ENTRYSIZE 0xC
 //#define FILEDIR	"fat0:/codes"
 //#define FILEDIR	"sd:/codes"
-#define FILEDIR	"/codes"
+#define FILEDIR	"/Project+"
 
 #define MAX_FILENAME_LEN	128
 
@@ -116,7 +116,7 @@ void app_loadgameconfig(char *discid)
 	//tempgameconf[defaultgameconfig_size] = '\n';
 	//tempgameconfsize = defaultgameconfig_size + 1;
 
-	fp = fopen("sd:/codes/gameconfig.txt", "rb");
+	fp = fopen("sd:/Project+/gameconfig.txt", "rb");
 		
 	if (!fp) fp = fopen("sd:/gameconfig.txt", "rb");
 			
@@ -610,7 +610,7 @@ u32 do_sd_code(char *filename)
 				memset((void*)0x80001800,0,kenobiwii_size);
 				memcpy((void*)0x80001800,kenobiwii,kenobiwii_size);
 				DCFlushRange((void*)0x80001800,kenobiwii_size);
-				hooktype = 1;
+				hooktype = 7;
 				memcpy((void*)0x80001800, (char*)0x80000000, 6);	// For WiiRD
 			}
 			// copy codes over
