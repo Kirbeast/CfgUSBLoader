@@ -116,7 +116,7 @@ void app_loadgameconfig(char *discid)
 	//tempgameconf[defaultgameconfig_size] = '\n';
 	//tempgameconfsize = defaultgameconfig_size + 1;
 
-	fp = fopen("sd:/Project+/gameconfig.txt", "rb");
+	fp = fopen("sd:/Project+/gc.txt", "rb");
 		
 	if (!fp) fp = fopen("sd:/gameconfig.txt", "rb");
 			
